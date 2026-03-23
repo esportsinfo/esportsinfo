@@ -1,69 +1,162 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pro Esports Team</title>
+    <title>BLACK SHARK ESPORTS</title>
+
     <style>
         body {
             margin: 0;
             font-family: Arial;
-            background-color: #0a0a0a;
+            background: #0a0a0a;
             color: white;
         }
+
         header {
             background: black;
             padding: 15px;
+            text-align: center;
+            border-bottom: 2px solid orange;
         }
+
+        header h1 {
+            color: orange;
+            margin: 0;
+        }
+
         nav {
             text-align: center;
+            padding: 10px;
+            background: #111;
         }
+
         nav a {
-            color: cyan;
-            margin: 20px;
+            color: white;
+            margin: 10px;
             text-decoration: none;
-            font-size: 18px;
+            font-weight: bold;
         }
+
+        nav a:hover {
+            color: orange;
+        }
+
         .hero {
-            padding: 100px;
             text-align: center;
-            background: url('images/bg.jpg');
+            padding: 80px 20px;
+            background: url('https://images.unsplash.com/photo-1542751371-adc38448a05e') no-repeat center;
             background-size: cover;
         }
+
+        .hero h2 {
+            font-size: 40px;
+        }
+
+        .btn {
+            background: orange;
+            padding: 12px 25px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
         .section {
             padding: 40px;
             text-align: center;
         }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+        }
+
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        th, td {
+            border: 1px solid #444;
+            padding: 10px;
+        }
+
+        th {
+            background: orange;
+        }
+
         footer {
             background: black;
             padding: 20px;
             text-align: center;
+            border-top: 2px solid orange;
         }
     </style>
 </head>
+
 <body>
 
 <header>
-    <h1>PRO ESPORTS</h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Team</a>
-        <a href="#">Matches</a>
-        <a href="#">News</a>
-        <a href="#">Contact</a>
-    </nav>
+    <h1>🔥 ESPORTS INFO</h1>
 </header>
 
+<nav>
+    <a href="#">Home</a>
+    <a href="#team">Team</a>
+    <a href="#stats">Stats</a>
+    <a href="#contact">Contact</a>
+</nav>
+
 <div class="hero">
-    <h2>Welcome to Our Esports Team</h2>
-    <p>Competitive Gaming Organization</p>
+    <h2>DOMINATE THE BATTLEFIELD</h2>
+    <button class="btn">Join Team</button>
 </div>
 
-<div class="section">
-    <h2>Our Players</h2>
-    <p>Player profiles coming soon.</p>
+<div class="section" id="team">
+    <h2>🎯 Our Squad</h2>
+
+    <div class="cards">
+        <div class="card">Player 1<br>Sniper</div>
+        <div class="card">Player 2<br>Assaulter</div>
+        <div class="card">Player 3<br>Support</div>
+        <div class="card">Player 4<br>IGL</div>
+    </div>
+</div>
+
+<div class="section" id="stats">
+    <h2>📊 Player Stats</h2>
+
+    <table>
+        <tr>
+            <th>Player</th>
+            <th>Eliminations</th>
+        </tr>
+        <tr>
+            <td>Player 1</td>
+            <td>45</td>
+        </tr>
+        <tr>
+            <td>Player 2</td>
+            <td>38</td>
+        </tr>
+    </table>
+</div>
+
+<div class="section" id="contact">
+    <h2>📞 Contact Us</h2>
+    <p>Instagram | YouTube | Discord</p>
 </div>
 
 <footer>
-    <p>© 2026 Pro Esports Team</p>
+    <p>© 2026 BLACK SHARK ESPORTS</p>
 </footer>
 
 </body>
