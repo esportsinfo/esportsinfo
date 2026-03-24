@@ -1,67 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Godlike Esports</title>
+<title>Team Alpha</title>
 
 <style>
 body {
     background: #0a0a0a;
     color: white;
     font-family: Arial;
+    margin: 0;
     text-align: center;
 }
 
-.player-box {
-    margin: 20px auto;
-    background: #111;
+/* HEADER */
+h2 {
     padding: 20px;
-    border-radius: 10px;
-    width: 250px;
+    color: orange;
 }
 
-.stat-row {
+/* PLAYER GRID */
+.players {
     display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* PLAYER BOX */
+.player-card {
+    background: #111;
+    border: 2px solid orange;
+    padding: 20px;
+    width: 180px;
+    border-radius: 12px;
+    transition: 0.4s;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* ANIMATION ACTIVE */
+.player-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* HOVER */
+.player-card:hover {
+    box-shadow: 0 0 15px orange;
+    transform: scale(1.05);
+}
+
+/* BACK BUTTON */
+a {
+    display: inline-block;
+    margin: 20px;
+    color: orange;
+    text-decoration: none;
 }
 </style>
+
+<script>
+window.onload = function() {
+    let cards = document.querySelectorAll(".player-card");
+    cards.forEach((card, index) => {
+        setTimeout(() => {
+            card.classList.add("show");
+        }, index * 200); // delay animation
+    });
+};
+</script>
+
 </head>
 
 <body>
 
-<h2>Godlike Esports</h2>
+<h2>🔥 Team Alpha Roster</h2>
 
-<div class="player-box">
-    <h3>Player 1</h3>
+<div class="players">
 
-    <div class="stat-row">
-        <span>Kills</span>
-        <span>50</span>
-    </div>
+    <div class="player-card">Player 1 (IGL)</div>
+    <div class="player-card">Player 2 (Assaulter)</div>
+    <div class="player-card">Player 3 (Sniper)</div>
+    <div class="player-card">Player 4 (Support)</div>
+    <div class="player-card">Player 5 (Entry)</div>
 
-    <div class="stat-row">
-        <span>Matches</span>
-        <span>20</span>
-    </div>
 </div>
 
-<div class="player-box">
-    <h3>Player 2</h3>
-
-    <div class="stat-row">
-        <span>Kills</span>
-        <span>40</span>
-    </div>
-
-    <div class="stat-row">
-        <span>Matches</span>
-        <span>18</span>
-    </div>
-</div>
-
-<br><br>
-
-<a href="index.html" style="color:orange;">⬅ Back</a>
+<a href="index.html">⬅ Back</a>
 
 </body>
 </html>
