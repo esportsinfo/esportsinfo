@@ -10,6 +10,31 @@ body {
     background: #0a0a0a;
     color: white;
 }
+    .cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 15px;
+    width: 200px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px orange;
+}
 
 /* HEADER */
 header {
@@ -168,8 +193,27 @@ function showSection(id) {
 </div>
 
 <div id="player" class="content" style="display:none;">
-    <h2>🎯 Players</h2>
-    <p>Add your player cards here</p>
+    <h2>🎯 Our Players</h2>
+
+    <div class="cards">
+
+        <!-- Player 1 -->
+        <div class="card">
+            <img src="player1.jpg">
+            <h3>Player 1</h3>
+            <p>Role: Sniper</p>
+            <p>Kills: 45</p>
+        </div>
+
+        <!-- Player 2 -->
+        <div class="card">
+            <img src="player2.jpg">
+            <h3>Player 2</h3>
+            <p>Role: Assaulter</p>
+            <p>Kills: 38</p>
+        </div>
+
+    </div>
 </div>
 
 <div id="ranking" class="content" style="display:none;">
