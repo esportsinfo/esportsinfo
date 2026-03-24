@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Teams - Esports Info</title>
+
+<style>
+body {
+    background: #0a0a0a;
+    color: white;
+    font-family: Arial;
+    margin: 0;
+    text-align: center;
+}
+
+/* HEADER */
+h2 {
+    color: orange;
+    padding: 20px;
+}
+
+/* TEAM GRID */
+.teams {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+}
+
+/* TEAM CARD */
+.team-card {
+    background: #111;
+    border-radius: 15px;
+    width: 200px;
+    padding: 15px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.team-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px orange;
+}
+
+/* BACK */
+a {
+    color: orange;
+    text-decoration: none;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>🎮 All Teams</h2>
+
+<div class="teams">
+
+    <a href="team1.html">
+        <div class="team-card">
+            <img src="team1.png">
+            <h3>Team Alpha</h3>
+        </div>
+    </a>
+
+    <a href="team2.html">
+        <div class="team-card">
+            <img src="team2.png">
+            <h3>Team Beta</h3>
+        </div>
+    </a>
+
+</div>
+
+<br>
+
+<a href="index.html">⬅ Back to Home</a>
+
+</body>
+</html>
