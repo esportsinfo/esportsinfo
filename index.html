@@ -191,29 +191,32 @@ function showSection(id) {
     <h2>🏆 Tournament</h2>
     <p>Upcoming tournaments will be shown here</p>
 </div>
-
 <div id="player" class="content" style="display:none;">
-    <h2>🎯 Our Players</h2>
+    <h2>🎮 Teams</h2>
 
     <div class="cards">
 
-        <!-- Player 1 -->
-        <div class="card">
-            <img src="player1.jpg">
-            <h3>Player 1</h3>
-            <p>Role: Sniper</p>
-            <p>Kills: 45</p>
+        <div class="card" onclick="showTeam('team1')">
+            <h3>Team Alpha</h3>
         </div>
 
-        <!-- Player 2 -->
-        <div class="card">
-            <img src="player2.jpg">
-            <h3>Player 2</h3>
-            <p>Role: Assaulter</p>
-            <p>Kills: 38</p>
+        <div class="card" onclick="showTeam('team2')">
+            <h3>Team Beta</h3>
         </div>
 
     </div>
+
+    <!-- TEAM DETAILS -->
+    <div id="team1" style="display:none; margin-top:30px;">
+        <h3>🔥 Team Alpha Roster</h3>
+        <p>Player 1 - IGL</p>
+        <p>Player 2 - Assaulter</p>
+        <p>Player 3 - Sniper</p>
+        <p>Player 4 - Support</p>
+    </div>
+
+    <div id="team2" style="
+
 </div>
 
 <div id="ranking" class="content" style="display:none;">
