@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reckoning Esports</title>
+
+<style>
+body {
+    background: #0a0a0a;
+    color: white;
+    font-family: Arial;
+    margin: 0;
+    text-align: center;
+}
+
+/* HEADER */
+h2 {
+    padding: 20px;
+    color: orange;
+}
+
+/* PLAYER GRID */
+.players {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* PLAYER BOX */
+.player-card {
+    background: #111;
+    border: 2px solid orange;
+    padding: 20px;
+    width: 180px;
+    border-radius: 12px;
+    transition: 0.4s;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* ANIMATION ACTIVE */
+.player-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* HOVER */
+.player-card:hover {
+    box-shadow: 0 0 15px orange;
+    transform: scale(1.05);
+}
+
+/* BACK BUTTON */
+a {
+    display: inline-block;
+    margin: 20px;
+    color: orange;
+    text-decoration: none;
+}
+</style>
+
+<script>
+window.onload = function() {
+    let cards = document.querySelectorAll(".player-card");
+    cards.forEach((card, index) => {
+        setTimeout(() => {
+            card.classList.add("show");
+        }, index * 200); // delay animation
+    });
+};
+</script>
+
+</head>
+
+<body>
+
+<h2>Reckoning Esports</h2>
+
+<div class="players">
+
+    <div class="player-card">Player 1 (IGL)</div>
+    <div class="player-card">Player 2 (Assaulter)</div>
+    <div class="player-card">Player 3 (Sniper)</div>
+    <div class="player-card">Player 4 (Support)</div>
+    <div class="player-card">Player 5 (Entry)</div>
+
+</div>
+
+<a href="index.html">⬅ Back to All teams</a>
+
+</body>
+</html>
