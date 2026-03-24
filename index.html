@@ -1,135 +1,135 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ESPORTS INFO</title>
+<title>BLACK SHARK ESPORTS</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial;
-            background: ;
-            color: white;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0a0a0a;
+    color: white;
+}
 
-        header {
-            background: White;
-            padding: 15px;
-            text-align: center;
-            border-bottom: 2px solid orange;
-        }
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: black;
+    border-bottom: 2px solid orange;
+}
 
-        header h1 {
-            color: Blue;
-            margin: 0;
-        }
+.logo {
+    color: orange;
+    font-size: 20px;
+    font-weight: bold;
+}
 
-        nav {
-            text-align: center;
-            padding: 10px;
-            background: #111;
-        }
+/* HAMBURGER MENU */
+.menu {
+    font-size: 25px;
+    cursor: pointer;
+}
 
-        nav a {
-            color: Black;
-            margin: 10px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* DROPDOWN */
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    background: #111;
+    padding: 10px;
+    border-radius: 10px;
+}
 
-        nav a:hover {
-            color: Blue;
-        }
+.dropdown a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
 
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-            background:Black;
-            background-size: cover;
-        }
+.dropdown a:hover {
+    background: orange;
+}
 
-        .hero h2 {
-            font-size: 40px;
-        }
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: #111;
+}
 
-        .btn {
-            background: orange;
-            padding: 12px 25px;
-            border: none;
-            font-weight: bold;
-            cursor: pointer;
-        }
+.navbar div {
+    padding: 15px;
+    cursor: pointer;
+}
 
-        .section {
-            padding: 40px;
-            text-align: center;
-        }
+.navbar div:hover {
+    color: orange;
+}
 
-        .cards {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+/* CONTENT */
+.content {
+    padding: 40px;
+    text-align: center;
+}
 
-        .card {
-            background: #1a1a1a;
-            padding: 20px;
-            border-radius: 10px;
-            width: 200px;
-        }
+/* FOOTER */
+footer {
+    background: black;
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid orange;
+}
+</style>
 
-        table {
-            margin: auto;
-            border-collapse: collapse;
-            width: 60%;
-        }
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("dropdown");
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
 
-        th, td {
-            border: 1px solid #444;
-            padding: 10px;
-        }
+function showPage(page) {
+    document.getElementById("content").innerHTML = page;
+}
+</script>
 
-        th {
-            background: orange;
-        }
-
-        footer {
-            background: Blue;
-            padding: 20px;
-            text-align: center;
-            border-top: 2px solid orange;
-        }
-    </style>
 </head>
 
 <body>
 
 <header>
-    <h1>ESPORTS INFO</h1>
+    <div class="logo">🔥 BLACK SHARK</div>
+    <div class="menu" onclick="toggleMenu()">☰</div>
 </header>
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#team">Team</a>
-    <a href="#stats">Stats</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<div class="hero">
-    <h2>DOMINATE THE BATTLEFIELD</h2>
-    <button class="btn">Join Team</button>
+<div id="dropdown" class="dropdown">
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Join Team</a>
 </div>
 
-<div class="section" id="team">
-    <h2>🎯 Our Squad</h2>
+<div class="navbar">
+    <div onclick="showPage('🏠 Welcome to Black Shark Esports')">Home</div>
+    <div onclick="showPage('🏆 Tournament coming soon')">Tournament</div>
+    <div onclick="showPage('🎯 Player list coming soon')">Player</div>
+    <div onclick="showPage('📊 Ranking will be updated')">Ranking</div>
+</div>
 
-<div class="section" id="contact">
-    <h2>📞 Contact Us</h2>
-    <p>Instagram | YouTube | Discord</p>
+<div id="content" class="content">
+    <h2>🔥 Welcome to Black Shark Esports</h2>
+    <p>Your gaming journey starts here</p>
 </div>
 
 <footer>
-    <p>© 2026 ESPORTS INFO</p>
+    <p>© 2026 BLACK SHARK ESPORTS | Instagram | YouTube | Discord</p>
 </footer>
 
 </body>
