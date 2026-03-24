@@ -114,10 +114,10 @@ function toggleMenu() {
 }
 
 function showSection(id) {
-    document.getElementById("home").style.display = "none";
-    document.getElementById("tournament").style.display = "none";
-    document.getElementById("player").style.display = "none";
-    document.getElementById("ranking").style.display = "none";
+    document.getElementById("Home").style.display = "none";
+    document.getElementById("Tournament").style.display = "none";
+    document.getElementById("Player").style.display = "none";
+    document.getElementById("Ranking").style.display = "none";
 
     document.getElementById(id).style.display = "block";
 }
@@ -160,7 +160,7 @@ function showTeam(teamId) {
 
 <!-- SECTIONS -->
 
-<div id="home" class="content">
+<div id="Home" class="content">
     <h2>Welcome To Esports Info World</h2>
     <p>All About Free Fire Max Esports.</p>
 
@@ -171,11 +171,12 @@ function showTeam(teamId) {
     </ul>
 </div>
 
-<div id="tournament" class="content" style="display:none;">
+<div id="Tournament" class="content" style="display:none;">
     <h2>🏆 Tournament</h2>
     <p>Upcoming tournaments will be shown here</p>
 </div>
-<div id="player" class="content" style="display:none;">
+
+    <div id="Player" class="content" style="display:none;">
     <h2>🎮 Teams</h2>
 
     <div class="cards">
@@ -198,12 +199,17 @@ function showTeam(teamId) {
         <p>Player 3 - Sniper</p>
         <p>Player 4 - Support</p>
     </div>
-
-    <div id="team2" style="
+<div id="team2" style="display:none; margin-top:20px;">
+        <h3>Team Beta Roster</h3>
+        <p>Player A</p>
+        <p>Player B</p>
+        <p>Player C</p>
+        <p>Player D</p>
+    </div>
 
 </div>
 
-<div id="ranking" class="content" style="display:none;">
+<div id="Ranking" class="content" style="display:none;">
     <h2>📊 Ranking</h2>
     <p>Your leaderboard will be here</p>
 </div>
