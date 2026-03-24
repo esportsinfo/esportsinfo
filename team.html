@@ -134,7 +134,15 @@ header {
         menu.style.display = "block";
     }
 }
-<script>
+    function showSection(id) {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("tournament").style.display = "none";
+    document.getElementById("player").style.display = "none";
+    document.getElementById("ranking").style.display = "none";
+
+    document.getElementById(id).style.display = "block";
+}
+</script>
 
 </head>
 
