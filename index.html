@@ -44,6 +44,23 @@ body {
     padding: 20px;
     border-radius: 10px;
 }
+    .player-box {
+    display: none;
+    margin-top: 20px;
+    background: #111;
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #333;
+}
 
 /* HEADER */
 header {
@@ -158,6 +175,12 @@ function showTeam(teamId) {
 
     document.getElementById(teamId).style.display = "block";
 }
+    function showPlayer(playerId) {
+    document.getElementById("p1").style.display = "none";
+    document.getElementById("p2").style.display = "none";
+
+    document.getElementById(playerId).style.display = "block";
+}
 </script>
 
 </head>
@@ -225,15 +248,52 @@ function showTeam(teamId) {
 </div>
 
 <!-- TEAM DETAILS -->
-
 <div id="team1" class="team-box">
     <h3>Godlike Esports</h3>
-    <ul>
-        <li>Player 1 - IGL</li>
-        <li>Player 2 - Assaulter</li>
-        <li>Player 3 - Sniper</li>
-        <li>Player 4 - Support</li>
-    </ul>
+
+    <!-- PLAYER LIST -->
+    <p onclick="showPlayer('p1')">Player 1 - IGL</p>
+    <p onclick="showPlayer('p2')">Player 2 - Assaulter</p>
+
+    <!-- PLAYER STATS -->
+
+    <div id="p1" class="player-box">
+        <h4>🎯 Player 1</h4>
+
+        <div class="stat-row">
+            <span>Kills</span>
+            <span>50</span>
+        </div>
+
+        <div class="stat-row">
+            <span>Matches</span>
+            <span>20</span>
+        </div>
+
+        <div class="stat-row">
+            <span>KD Ratio</span>
+            <span>2.5</span>
+        </div>
+    </div>
+
+    <div id="p2" class="player-box">
+        <h4>🎯 Player 2</h4>
+
+        <div class="stat-row">
+            <span>Kills</span>
+            <span>40</span>
+        </div>
+
+        <div class="stat-row">
+            <span>Matches</span>
+            <span>18</span>
+        </div>
+
+        <div class="stat-row">
+            <span>KD Ratio</span>
+            <span>2.2</span>
+        </div>
+    </div>
 </div>
 
 <div id="team2" class="team-box">
