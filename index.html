@@ -91,17 +91,13 @@ footer {
 </style>
 
 <script>
-function toggleMenu() {
-    var menu = document.getElementById("dropdown");
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
-    }
-}
+function showSection(id) {
+    document.getElementById("Home").style.display = "none";
+    document.getElementById("Tournament").style.display = "none";
+    document.getElementById("Player").style.display = "none";
+    document.getElementById("Ranking").style.display = "none";
 
-function showPage(page) {
-    document.getElementById("content").innerHTML = page;
+    document.getElementById(id).style.display = "block";
 }
 </script>
 
@@ -132,9 +128,24 @@ function showPage(page) {
     <div onclick="showPage('📊 Ranking will be updated')">Ranking</div>
 </div>
 
-<div id="content" class="content">
-    <h2> Welcome to Esports Info</h2>
-    <p>Your gaming journey starts here</p>
+<div id="Home" class="content">
+    <h2>Welcome to Esports Info World</h2>
+    <p>FFM Esports Coverage.</p>
+</div>
+
+<div id="Tournament" class="content" style="display:none;">
+    <h2>🏆 Tournament</h2>
+    <p>Upcoming matches will be shown here</p>
+</div>
+
+<div id="Player" class="content" style="display:none;">
+    <h2>🎯 Players</h2>
+    <p>Player list coming soon</p>
+</div>
+
+<div id="Ranking" class="content" style="display:none;">
+    <h2>📊 Ranking</h2>
+    <p>Leaderboard coming soon</p>
 </div>
 
 <footer>
