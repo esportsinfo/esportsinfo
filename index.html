@@ -17,21 +17,31 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    font-weight: bold;
     background: black;
+    border-bottom: 2px solid orange;
 }
 
+/* LOGO */
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.logo span {
     color: orange;
-    font-size: 40px;
+    font-size: 20px;
     font-weight: bold;
 }
 
-/* HAMBURGER MENU */
+/* MENU */
 .menu {
-    font-size: 40px;
+    font-size: 25px;
     cursor: pointer;
-    font-weight: bold;
 }
 
 /* DROPDOWN */
@@ -53,31 +63,30 @@ header {
 }
 
 .dropdown a:hover {
-    background: ;
+    background: orange;
 }
 
 /* NAVBAR */
 .navbar {
     display: flex;
     justify-content: center;
-    background:#1E90FF;
+    background: #111;
 }
 
 .navbar div {
-    padding: 25px;
+    padding: 20px 30px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
-    letter-spacing: 1px;
 }
 
 .navbar div:hover {
-    color: White;
+    color: orange;
 }
 
 /* CONTENT */
 .content {
-    padding: 80px;
+    padding: 40px;
     text-align: center;
 }
 
@@ -86,16 +95,24 @@ footer {
     background: black;
     text-align: center;
     padding: 20px;
-    border-top: 2px White;
 }
 </style>
 
 <script>
+function toggleMenu() {
+    var menu = document.getElementById("dropdown");
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+
 function showSection(id) {
-    document.getElementById("Home").style.display = "none";
-    document.getElementById("Tournament").style.display = "none";
-    document.getElementById("Player").style.display = "none";
-    document.getElementById("Ranking").style.display = "none";
+    document.getElementById("home").style.display = "none";
+    document.getElementById("tournament").style.display = "none";
+    document.getElementById("player").style.display = "none";
+    document.getElementById("ranking").style.display = "none";
 
     document.getElementById(id).style.display = "block";
 }
@@ -105,49 +122,60 @@ function showSection(id) {
 
 <body>
 
+<!-- HEADER -->
 <header>
-    <div class="logo" style="display:flex; align-items:center; gap:3px;">
-    <img src="lgo.png" style="height:120px;">
-    <span style="font-size:30px; font-weight:bold; color:white;">
-        ESPORTS INFO 
-    </span>
-</div>
+    <div class="logo">
+        <img src="lgo.png">
+        <span>ESPORTS INFO</span>
+    </div>
+
     <div class="menu" onclick="toggleMenu()">☰</div>
 </header>
 
+<!-- DROPDOWN -->
 <div id="dropdown" class="dropdown">
     <a href="#">About</a>
     <a href="#">Contact</a>
     <a href="#">Join Team</a>
 </div>
 
+<!-- NAVBAR -->
 <div class="navbar">
-<div onclick="showSection('home')">Home</div>
-<div onclick="showSection('tournament')">Tournament</div>
-<div onclick="showSection('player')">Player</div>
-<div onclick="showSection('ranking')">Ranking</div>
+    <div onclick="showSection('home')">Home</div>
+    <div onclick="showSection('tournament')">Tournament</div>
+    <div onclick="showSection('player')">Player</div>
+    <div onclick="showSection('ranking')">Ranking</div>
 </div>
 
-<div id="Home" class="content">
-    <h2>Welcome to Esports Info World</h2>
-    <p>FFM Esports Coverage.</p>
+<!-- SECTIONS -->
+
+<div id="home" class="content">
+    <h2>Welcome To Esports Info World</h2>
+    <p>All About Free Fire Max Esports.</p>
+
+    <h3>🔥 Achievements</h3>
+    <ul>
+        <li>Top 5 in Scrims</li>
+        <li>Winner Local Tournament</li>
+    </ul>
 </div>
 
-<div id="Tournament" class="content" style="display:none;">
+<div id="tournament" class="content" style="display:none;">
     <h2>🏆 Tournament</h2>
-    <p>Upcoming matches will be shown here</p>
+    <p>Upcoming tournaments will be shown here</p>
 </div>
 
-<div id="Player" class="content" style="display:none;">
+<div id="player" class="content" style="display:none;">
     <h2>🎯 Players</h2>
-    <p>Player list coming soon</p>
+    <p>Add your player cards here</p>
 </div>
 
-<div id="Ranking" class="content" style="display:none;">
+<div id="ranking" class="content" style="display:none;">
     <h2>📊 Ranking</h2>
-    <p>Leaderboard coming soon</p>
+    <p>Your leaderboard will be here</p>
 </div>
 
+<!-- FOOTER -->
 <footer>
     <p>© 2026 ESPORTS INFO | Instagram | YouTube | Discord</p>
 </footer>
