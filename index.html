@@ -1,1 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Esports Info</title>
 
+<style>
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0a0a0a;
+    color: white;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background: #0a0a0a;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: #0a0a0a;
+    border-bottom: 1px solid #222;
+}
+
+.navbar a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: 20px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: orange;
+    text-shadow: 0 0 10px orange;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    width: 0;
+    height: 2px;
+    background: orange;
+    transition: 0.3s;
+    transform: translateX(-50%);
+}
+
+.navbar a:hover::after {
+    width: 60%;
+}
+
+/* ACTIVE */
+.active {
+    color: orange !important;
+    text-shadow: 0 0 10px orange;
+}
+
+.active::after {
+    width: 60%;
+}
+
+/* HOME CONTENT */
+.content {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.content h1 {
+    font-size: 32px;
+    color: orange;
+}
+
+.content p {
+    color: #aaa;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #0a0a0a;
+    border-top: 1px solid #222;
+    margin-top: 40px;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.footer-content h3 {
+    color: orange;
+}
+
+.footer-links {
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: orange;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <img src="lgo.png">
+        <h2>Esports Info</h2>
+    </div>
+</header>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="tournament.html">Tournament</a>
+    <a href="team.html">Player</a>
+    <a href="ranking.html">Ranking</a>
+</div>
+
+<!-- HOME CONTENT -->
+<div class="content">
+    <h1>Welcome to Esports Info 🎮</h1>
+    <p>Explore teams, players, tournaments and rankings.</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+        <h3>ESPORTS INFO</h3>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="tournament.html">Tournament</a>
+            <a href="team.html">Player</a>
+            <a href="ranking.html">Ranking</a>
+        </div>
+
+        <p>© 2026 Esports Info</p>
+    </div>
+</footer>
+
+</body>
+</html>
