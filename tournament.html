@@ -67,7 +67,7 @@ header {
 .dropdown a:hover {
     background: orange;
 }
-    .navbar {
+        .navbar {
     display: flex;
     justify-content: center;
     background:#1E90FF;
@@ -87,14 +87,34 @@ header {
     font-weight: bold;
     transition: 0.3s;
 }
-    /* ACTIVE TAB */
-.navbar a:active {
-    background: white;
-    color: Black;
-}
-    .navbar a:active {
+    
+/* Animated underline */
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    width: 0;
+    height: 2px;
     background: orange;
-    }
+    transition: 0.3s;
+    transform: translateX(-50%);
+}
+
+/* Expand line on hover */
+.navbar a:hover::after {
+    width: 60%;
+}
+
+/* ACTIVE TAB */
+.active {
+    color: orange !important;
+    text-shadow: 0 0 10px orange;
+}
+
+.active::after {
+    width: 60%;
+}
     
 /* Animated underline */
 .navbar a::after {
