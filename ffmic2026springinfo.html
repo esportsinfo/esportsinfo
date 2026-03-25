@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BGMI Masters Series</title>
+
+<style>
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0a0a0a;
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #222;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 20px 30px;
+    font-weight: bold;
+}
+
+.active {
+    color: #00bfff;
+    border-bottom: 2px solid #00bfff;
+}
+
+/* HEADER (BANNER STYLE) */
+.banner {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to right, #111, #0a0a0a);
+}
+
+.banner img {
+    width: 120px;
+}
+
+.banner h1 {
+    color: orange;
+    margin-top: 10px;
+}
+
+/* DETAILS BOX (GLASS EFFECT) */
+.details {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    margin: 30px auto;
+    padding: 25px;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,165,0,0.3);
+}
+
+.details p {
+    margin: 12px 0;
+    font-size: 15px;
+}
+
+/* TEAM SECTION */
+.teams {
+    text-align: center;
+}
+
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* TEAM CARD */
+.team-card {
+    background: #111;
+    border-radius: 12px;
+    padding: 15px;
+    width: 140px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.team-card img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.team-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px #00bfff;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="tournament.html" class="active">Tournament</a>
+    <a href="team.html">Player</a>
+    <a href="ranking.html">Ranking</a>
+</div>
+
+<!-- BANNER -->
+<div class="banner">
+    <img src="ffmic2026springlogo.png">
+    <h1>FFMIC 2026 SPRING</h1>
+</div>
+
+<!-- DETAILS -->
+<div class="details">
+    <p>📋 Format: Squad</p>
+    <p>💰 Prize Pool: ₹50,00,000</p>
+    <p>📅 Date: March 2026</p>
+</div>
+
+<!-- TEAMS -->
+<div class="teams">
+    <h2 style="color:orange;">Participating Teams</h2>
+
+    <div class="team-list">
+
+        <a href="godlikeinfo.html">
+            <div class="team-card">
+                <img src="godlikelogo.png">
+                <p>Godlike Esports</p>
+            </div>
+        </a>
+
+        <a href="reckoninginfo.html">
+            <div class="team-card">
+                <img src="reckoninglogo.png">
+                <p>Reckoning Esports</p>
+            </div>
+        </a>
+
+        <a href="team3.html">
+            <div class="team-card">
+                <img src="team3.png">
+                <p>Team Gamma</p>
+            </div>
+        </a>
+
+        <a href="team4.html">
+            <div class="team-card">
+                <img src="team4.png">
+                <p>Team Delta</p>
+            </div>
+        </a>
+
+    </div>
+</div>
+
+</body>
+</html>
