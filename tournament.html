@@ -107,6 +107,52 @@ header {
 .dropdown a:hover {
     background: orange;
 }
+    /* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: #1E90FF;
+    border-bottom: 1px solid #222;
+}
+
+.navbar a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: 20px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: orange;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    width: 0;
+    height: 2px;
+    background: orange;
+    transition: 0.3s;
+    transform: translateX(-50%);
+}
+
+.navbar a:hover::after {
+    width: 60%;
+}
+
+/* ACTIVE */
+.active {
+    color: orange !important;
+}
+
+.active::after {
+    width: 60%;
+}
     
 </style>
     
