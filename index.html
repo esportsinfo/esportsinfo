@@ -149,7 +149,35 @@ footer {
 .footer-links a:hover {
     color: orange;
 }
+.articles {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
+.article-card {
+    background: #111;
+    padding: 20px;
+    width: 250px;
+    border-radius: 12px;
+    transition: 0.3s;
+    text-align: left;
+}
+
+.article-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px orange;
+}
+
+.article-card h3 {
+    color: orange;
+}
+
+.articles a {
+    text-decoration: none;
+    color: white;
+}
 </style>
     <script>
         function toggleMenu() {
@@ -193,6 +221,26 @@ footer {
 <div class="content">
     <h1>Welcome to Esports Info 🎮</h1>
     <p>Explore teams, players, tournaments and rankings.</p>
+</div>
+    
+    <h1>Latest Esports News 📰</h1>
+
+<div class="articles">
+
+    <a href="article1.html">
+        <div class="article-card">
+            <h3>Team Alpha wins tournament</h3>
+            <p>Click to read full article...</p>
+        </div>
+    </a>
+
+    <a href="article2.html">
+        <div class="article-card">
+            <h3>New BGMI update released</h3>
+            <p>Click to read full article...</p>
+        </div>
+    </a>
+
 </div>
 
 <!-- FOOTER -->
