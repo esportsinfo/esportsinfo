@@ -131,6 +131,24 @@ header {
 .navbar a:hover {
     color: orange;
 }
+    .navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Hover */
+.navbar a:hover {
+    color: orange;
+}
+
+/* ACTIVE TAB */
+.active {
+    color: orange !important;
+    border-bottom: 2px solid orange;
+}
 </style>
     
 <script>
@@ -172,7 +190,7 @@ header {
 <div class="navbar">
     <a href="index.html"><div>Home</div></a>
     <a href="#"><div>Tournament</div></a>
-    <a href="team.html"><div>Player</div></a>
+    <a href="player.html" class="active">Player</a>
     <a href="#"><div>Ranking</div></a>
 </div>
 
