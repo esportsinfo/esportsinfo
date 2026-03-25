@@ -147,6 +147,68 @@ footer {
 .footer-links a:hover {
     color: orange;
 }
+<h1>🔥 Latest Esports News</h1>
+
+<!-- FEATURED ARTICLE -->
+<div class="featured">
+    <a href="article1.html">
+        <img src="news1.jpg">
+        <div class="featured-text">
+            <h2>Team Alpha wins Grand Finals 🏆</h2>
+            <p>March 2026 • Click to read full story</p>
+        </div>
+    </a>
+</div>
+
+<!-- OTHER ARTICLES -->
+<div class="articles">
+
+    <a href="article2.html">
+        <div class="article-card">
+            <img src="news2.jpg">
+            <h3>BGMI new update released</h3>
+            <p>March 2026</p>
+        </div>
+    </a>
+
+    <a href="article3.html">
+        <div class="article-card">
+            <img src="news3.jpg">
+            <h3>Top 5 teams this month</h3>
+            <p>March 2026</p>
+        </div>
+    </a>
+
+</div>
+    /* FEATURED */
+.featured {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.featured a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    display: block;
+}
+
+.featured img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.featured-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.featured-text h2 {
+    color: orange;
+}
+
+/* ARTICLES GRID */
 .articles {
     display: flex;
     justify-content: center;
@@ -156,11 +218,24 @@ footer {
 
 .article-card {
     background: #111;
-    padding: 20px;
-    width: 250px;
     border-radius: 12px;
+    width: 220px;
+    overflow: hidden;
     transition: 0.3s;
-    text-align: left;
+}
+
+.article-card img {
+    width: 100%;
+}
+
+.article-card h3 {
+    padding: 10px;
+    color: orange;
+}
+
+.article-card p {
+    padding: 0 10px 10px;
+    color: #aaa;
 }
 
 .article-card:hover {
@@ -168,10 +243,7 @@ footer {
     box-shadow: 0 0 15px orange;
 }
 
-.article-card h3 {
-    color: orange;
-}
-
+/* REMOVE LINK STYLE */
 .articles a {
     text-decoration: none;
     color: white;
