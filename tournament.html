@@ -87,6 +87,14 @@ header {
     font-weight: bold;
     transition: 0.3s;
 }
+    /* ACTIVE TAB */
+.active {
+    background: White;
+    color: #FF8C00;
+}
+    active::after {
+    width: 60%;
+}
 
 /* Animated underline */
 .navbar a::after {
@@ -102,16 +110,6 @@ header {
 
 /* Expand line on hover */
 .navbar a:hover::after {
-    width: 60%;
-}
-
-/* ACTIVE TAB */
-.active {
-    background: White;
-    color: #FF8C00;
-}
-
-.active::after {
     width: 60%;
 }
 
