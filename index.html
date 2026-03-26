@@ -89,24 +89,6 @@ header {
     font-weight: bold;
     transition: 0.3s;
 }
-    
-/* Animated underline */
-.navbar a::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 10px;
-    width: 0;
-    height: 2px;
-    background: orange;
-    transition: 0.3s;
-    transform: translateX(-50%);
-}
-
-/* Expand line on hover */
-.navbar a:hover::after {
-    width: 60%;
-}
 
 /* ACTIVE TAB */
 .navbar a.active{
@@ -115,23 +97,6 @@ header {
 }
 
 .active::after {
-    width: 60%;
-}
-    /* Animated underline */
-.navbar a::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 10px;
-    width: 0;
-    height: 2px;
-    background: orange;
-    transition: 0.3s;
-    transform: translateX(-50%);
-}
-
-/* Expand line on hover */
-.navbar a:hover::after {
     width: 60%;
 }
 
