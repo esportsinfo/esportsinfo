@@ -101,37 +101,39 @@ header {
     padding: 20px;
 }
 
-/* ARTICLES */
-.articles {
+/* TEAM GRID */
+.teams {
     display: flex;
-    justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
-    padding: 10px;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
 }
 
-.article-card {
-    background: black;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 720px;
-    overflow: hidden;
+/* TEAM CARD */
+.team-card {
+    background: #111;
+    border-radius: 15px;
+    width: 200px;
+    padding: 15px;
     transition: 0.3s;
+    cursor: pointer;
 }
 
-.article-card h3 {
-    padding: 10px;
-    color: white;
+.team-card img {
+    width: 100%;
+    border-radius: 10px;
 }
 
-.article-card p {
-    padding: 0 10px 10px;
-    color: #aaa;
-}
-
-.article-card:hover {
-    transform: scale(1.03);
+.team-card:hover {
+    transform: scale(1.05);
     box-shadow: 0 0 15px orange;
+}
+
+/* BACK */
+a {
+    color: orange;
+    text-decoration: none;
 }
 
 /* FOOTER */
