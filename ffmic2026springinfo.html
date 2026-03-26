@@ -104,16 +104,24 @@ body {
 }
     .tournament-header {
     display: flex;
-    flex-direction: column;   /* logo above name */
-    align-items: center;      /* horizontal center */
-    justify-content: center;  /* vertical center */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    width; 150px !important;
-    height; auto;
+    width: 150px;
+}
+
+.tournament-header img {
+    width: 80px;
+    height: auto;
+}
+
+.tournament-header h1 {
+    font-size: 16px;
 }
     
     /* BODY HEADER */
-    tournment-card {
+    .tournment-card {
     background: #111;
     border-radius: 12px;
     padding: 15px;
@@ -231,7 +239,7 @@ a {
 
 <!-- BODY HEADER -->
 <div class="tournament-header tournament-card">
-    <img src="ffmic2026springlogo.png">
+    <img src="ffmic2026springlogo.png" class="tour-logo">
     <h1>FFMIC 2026 SPRING</h1>
 </div>
 
