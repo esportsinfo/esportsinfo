@@ -11,8 +11,8 @@
 body {
     margin: 0;
     font-family: Arial;
-    background: white;
-    color: black;
+    background: #0a0a0a;
+    color: white;
 }
 
 /* HEADER */
@@ -22,7 +22,6 @@ header {
     align-items: center;
     padding: 12px 20px;
     background: #000;
-    color: white;
 }
 
 /* LOGO */
@@ -37,13 +36,11 @@ header {
 }
 
 .logo h2 {
-    color: white;
     font-size: 18px;
 }
 
 /* MENU */
 .menu {
-    color: white;
     font-size: 26px;
     cursor: pointer;
 }
@@ -95,45 +92,42 @@ header {
     color: black;
 }
 
-/* CONTENT */
-.content {
-    text-align: center;
-    padding: 20px;
-}
-
-/* TEAM SECTION */
-.teams {
-    text-align: center;
-}
-
+/* TEAM GRID */
 .team-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 20px;
     padding: 20px;
+    max-width: 1000px;
+    margin: auto;
 }
 
 /* TEAM CARD */
-    .team-card {
+.team-card {
     background: #111;
     border-radius: 12px;
     padding: 15px;
-    width: 120px;
     height: 140px;
-    transition: 0.s
-    
+    border: 1px solid #222;
+    transition: 0.3s ease;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .team-card img {
     width: 60px;
-    height: 60px
+    height: 60px;
     object-fit: contain;
     margin-bottom: 10px;
+}
+
+.team-card h3 {
+    font-size: 14px;
+    text-align: center;
 }
 
 .team-card:hover {
@@ -141,9 +135,13 @@ header {
     box-shadow: 0 0 15px #00bfff;
 }
 
+/* BACK LINK */
+.back {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-/* BACK */
-a {
+.back a {
     color: orange;
     text-decoration: none;
 }
@@ -154,9 +152,8 @@ footer {
     padding: 10px;
 }
 
-/* 🔥 MOBILE RESPONSIVE */
+/* MOBILE */
 @media (max-width: 600px) {
-
     .logo h2 {
         font-size: 14px;
     }
@@ -169,7 +166,6 @@ footer {
     .menu {
         font-size: 22px;
     }
-
 }
 
 </style>
@@ -177,11 +173,7 @@ footer {
 <script>
 function toggleMenu() {
     var menu = document.getElementById("dropdown");
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
-    }
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
 }
 </script>
 
@@ -214,77 +206,47 @@ function toggleMenu() {
     <a href="ranking.html">Ranking</a>
 </div>
 
-<!-- CONTENT -->
+<!-- TITLE -->
 <h1 style="text-align:center;">Indian Teams</h1>
-    
 
-<div class="teams">
+<!-- TEAM GRID -->
+<div class="team-list">
 
-    <a href="godlikeinfo.html">
-        <div class="team-card">
-            <img src="godlike.png">
-            <h3>Godlike Esports</h3>
-        </div>
-    </a>
+    <div class="team-card" onclick="location.href='godlikeinfo.html'">
+        <img src="godlike.png">
+        <h3>Godlike Esports</h3>
+    </div>
 
-    <a href="reckoninginfo.html">
-        <div class="team-card">
-            <img src="reckoninglogo.png">
-            <h3>Reckoning Esports</h3>
-        </div>
-    </a>
+    <div class="team-card" onclick="location.href='reckoninginfo.html'">
+        <img src="reckoninglogo.png">
+        <h3>Reckoning Esports</h3>
+    </div>
 
-    <a href="reckoninginfo.html">
-        <div class="team-card">
-            <img src="reckoninglogo.png">
-            <h3>Reckoning Esports</h3>
-        </div>
-    </a>
+    <div class="team-card" onclick="location.href='s8ul.html'">
+        <img src="s8ul.png">
+        <h3>S8UL Esports</h3>
+    </div>
 
-    <a href="reckoninginfo.html">
-        <div class="team-card">
-            <img src="reckoninglogo.png">
-            <h3>Reckoning Esports</h3>
-        </div>
-    </a>
+    <div class="team-card">
+        <img src="team_soul.png">
+        <h3>Team Soul</h3>
+    </div>
 
-    <a href="reckoninginfo.html">
-        <div class="team-card">
-            <img src="reckoninglogo.png">
-            <h3>Reckoning Esports</h3>
-        </div>
-    </a>
+    <div class="team-card">
+        <img src="orangutan.png">
+        <h3>Orangutan</h3>
+    </div>
 
-    <a href="reckoninginfo.html">
-        <div class="team-card">
-            <img src="reckoninglogo.png">
-            <h3>Reckoning Esports</h3>
-        </div>
-    </a>
+    <div class="team-card">
+        <img src="global.png">
+        <h3>Global Esports</h3>
+    </div>
 
-    <a href="reckoninginfo.html">
-        <div class="team-card">
-            <img src="reckoninglogo.png">
-            <h3>Reckoning Esports</h3>
-        </div>
-    </a>
+</div>
 
-    <a href="reckoninginfo.html">
-        <div class="team-card">
-            <img src="reckoninglogo.png">
-            <h3>Reckoning Esports</h3>
-        </div>
-    </a>
-
-    <a href="s8ul.html">
-        <div class="team-card">
-            <img src="reckoninglogo.png">
-            <h3>Reckoning Esports</h3>
-        </div>
-    </a>
+<!-- BACK -->
+<div class="back">
     <a href="index.html">⬅ Back to Home</a>
-
-
 </div>
 
 <!-- FOOTER -->
